@@ -5,13 +5,13 @@ namespace RadioBrowser.Net.Tests.Extensions {
     public class AdvancedStationSearchExtensionTests : SearchExtensionTests<AdvancedStationSearch> {
         public AdvancedStationSearchExtensionTests()
         {
-            testDataList = new List<TestData<AdvancedStationSearch>>()
+            testDataList = new List<TestData>()
             {
-                new TestData<AdvancedStationSearch>(
+                new TestData(
                     null,
                     new List<Parameter>()
                     ),
-                new TestData<AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         Name = "Name",
@@ -33,7 +33,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData<AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch(),
                     new List<Parameter>()
                     {
@@ -51,7 +51,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         Country = "Country"
@@ -73,7 +73,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         CountryCode = "CC"
@@ -95,7 +95,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         State = "State"
@@ -117,7 +117,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         Language = "Language"
@@ -139,7 +139,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         Tag = "Tag"
@@ -161,7 +161,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         TagList = new List<string> { "Tag" }
@@ -183,7 +183,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         HideBrokenParameter()
                     }
                     ),
-                new TestData <AdvancedStationSearch>(
+                new TestData(
                     new AdvancedStationSearch
                     {
                         Codec = "Codec"

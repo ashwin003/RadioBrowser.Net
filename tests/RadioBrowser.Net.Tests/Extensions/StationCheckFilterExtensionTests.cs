@@ -6,19 +6,19 @@ namespace RadioBrowser.Net.Tests.Extensions {
         public StationCheckFilterExtensionTests()
         {
             var guid = Guid.NewGuid();
-            testDataList = new List<TestData<StationCheckFilter>> {
-                new TestData<StationCheckFilter>(
+            testDataList = new List<TestData> {
+                new TestData(
                     null,
                     new List<Parameter>()
                     ),
-                new TestData<StationCheckFilter>(
+                new TestData(
                     new StationCheckFilter {
                     },
                     new List<Parameter>() {
                         LimitParameter(999999)
                     }
                     ),
-                new TestData<StationCheckFilter>(
+                new TestData(
                     new StationCheckFilter {
                         Limit = 100
                     },
@@ -26,7 +26,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         LimitParameter(100)
                     }
                     ),
-                new TestData<StationCheckFilter>(
+                new TestData(
                     new StationCheckFilter {
                         Seconds = 5,
                         Limit = 100
@@ -36,7 +36,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         LimitParameter(100),
                     }
                     ),
-                new TestData<StationCheckFilter>(
+                new TestData(
                     new StationCheckFilter {
                         LastCheckId = guid,
                         Seconds = 5,

@@ -6,12 +6,12 @@ namespace RadioBrowser.Net.Tests.Extensions {
 
         public StationSearchFilterExtensionTests()
         {
-            testDataList = new List<TestData<StationSearchFilter>> {
-                new TestData<StationSearchFilter>(
+            testDataList = new List<TestData> {
+                new TestData(
                     null,
                     new List<Parameter>()
                     ),
-                new TestData<StationSearchFilter>(
+                new TestData(
                     new StationSearchFilter {
                     },
                     new List<Parameter>() {
@@ -22,7 +22,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         LimitParameter()
                     }
                     ),
-                new TestData<StationSearchFilter>(
+                new TestData(
                     new StationSearchFilter {
                         Order = StationSortOrder.State,
                         Reverse = true,

@@ -5,12 +5,12 @@ namespace RadioBrowser.Net.Tests.Extensions {
     public class StateSearchFilterExtensionTests : SearchExtensionTests<StateSearchFilter> {
         public StateSearchFilterExtensionTests()
         {
-            testDataList = new List<TestData<StateSearchFilter>> {
-                new TestData<StateSearchFilter>(
+            testDataList = new List<TestData> {
+                new TestData(
                     null,
                     new List<Parameter>()
                     ),
-                new TestData<StateSearchFilter>(
+                new TestData(
                     new StateSearchFilter {
                     },
                     new List<Parameter>() {
@@ -21,7 +21,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         LimitParameter()
                     }
                     ),
-                new TestData<StateSearchFilter>(
+                new TestData(
                     new StateSearchFilter {
                         Order = SortOrder.StationCount,
                         Reverse = true,
@@ -37,7 +37,7 @@ namespace RadioBrowser.Net.Tests.Extensions {
                         LimitParameter(100)
                     }
                     ),
-                new TestData<StateSearchFilter>(
+                new TestData(
                     new StateSearchFilter {
                         Country = "Country",
                         Order = SortOrder.StationCount,

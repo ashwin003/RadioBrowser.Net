@@ -2,7 +2,7 @@
 
 namespace RadioBrowser.Net.Tests.Extensions {
     public class SearchExtensionTests<TSearchFilter> {
-        protected IEnumerable<TestData<TSearchFilter>> testDataList;
+        protected IEnumerable<TestData> testDataList = new List<TestData>();
         protected static Parameter NameParameter(string name) => CreateParameter(nameof(name), name);
 
         protected static Parameter OrderParameter(string order) => CreateParameter(nameof(order), order);
@@ -49,6 +49,6 @@ namespace RadioBrowser.Net.Tests.Extensions {
 
         private static Parameter CreateParameter(string name, object value) => Parameter.CreateParameter(name, value, ParameterType.QueryString);
 
-        protected record class TestData<TSearchFilter>(TSearchFilter? SearchInput, List<Parameter> ExpectedParameters);
+        protected record class TestData(TSearchFilter? SearchInput, List<Parameter> ExpectedParameters);
     }
 }
