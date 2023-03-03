@@ -1,10 +1,15 @@
 # RadioBrowser.Net
 
+[![NuGet version (RadioBrowser.Net)](https://img.shields.io/nuget/v/RadioBrowser.Net.svg?style=flat-square)](https://www.nuget.org/packages/RadioBrowser.Net/)
+
+
 Wrapper for https://www.radio-browser.info/
 
 Documentation for the API can be found [here](http://de1.api.radio-browser.info/#General)
 
 ## How to use
+
+Install [this](https://www.nuget.org/packages/RadioBrowser.Net/) nuget package.
 
 Register the interfaces in your DI container as follows:
 
