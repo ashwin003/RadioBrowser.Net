@@ -7,9 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CE3328AC-B03
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F433E30B-61B1-48BA-B71E-4C136A0178A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioBrowser.Net", "src\RadioBrowser.Net\RadioBrowser.Net.csproj", "{2CF52D82-94E6-45AA-9223-33B9D0B79270}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioBrowser.Net", "src\RadioBrowser.Net\RadioBrowser.Net.csproj", "{2CF52D82-94E6-45AA-9223-33B9D0B79270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioBrowser.Net.Tests", "tests\RadioBrowser.Net.Tests\RadioBrowser.Net.Tests.csproj", "{306B714D-A46D-48B3-8F21-D7F4A0F6DCB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioBrowser.Net.Tests", "tests\RadioBrowser.Net.Tests\RadioBrowser.Net.Tests.csproj", "{306B714D-A46D-48B3-8F21-D7F4A0F6DCB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{1B0ECDF1-FD37-41D9-866D-DB154FD3FA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioBrowserSample", "example\RadioBrowserSample\RadioBrowserSample.csproj", "{5BF90551-A44B-4470-B123-51D3467E16DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{306B714D-A46D-48B3-8F21-D7F4A0F6DCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{306B714D-A46D-48B3-8F21-D7F4A0F6DCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{306B714D-A46D-48B3-8F21-D7F4A0F6DCB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF90551-A44B-4470-B123-51D3467E16DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF90551-A44B-4470-B123-51D3467E16DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF90551-A44B-4470-B123-51D3467E16DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF90551-A44B-4470-B123-51D3467E16DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2CF52D82-94E6-45AA-9223-33B9D0B79270} = {CE3328AC-B03E-495D-8DC4-76C66CFC2242}
 		{306B714D-A46D-48B3-8F21-D7F4A0F6DCB3} = {F433E30B-61B1-48BA-B71E-4C136A0178A0}
+		{5BF90551-A44B-4470-B123-51D3467E16DB} = {1B0ECDF1-FD37-41D9-866D-DB154FD3FA69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5C21B4C-4F04-4836-B062-26A02714B82B}
