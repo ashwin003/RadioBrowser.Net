@@ -16,7 +16,7 @@ internal class ApiService : IApiService
     public async Task<T> ProcessRequest<T>(RequestPayload requestPayload, CancellationToken cancellationToken = default)
     {
         var restRequest = requestPayload.ToRestRequest();
-        var restResponse = await restClient.ExecuteAsync<T>(restRequest, cancellationToken);
+        var restResponse = await restClient.ExecuteAsync<T>(restRequest, cancellationToken).ConfigureAwait(false);
         if (restResponse.IsSuccessful && restResponse.Data is not null)
         {
             return restResponse.Data!;
