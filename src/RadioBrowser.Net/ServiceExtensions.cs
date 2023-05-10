@@ -18,7 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection {
                     };
 
                     var selectedServer = availableServers.PickRandom();
-                    var restClient = new RestClient(selectedServer).UseNewtonsoftJson();
+                    var restClient = new RestClient(selectedServer, configureSerialization: cfg => cfg.UseNewtonsoftJson());
                     restClient.AddDefaultHeader("User-Agent", userAgent);
                     return restClient;
                 })

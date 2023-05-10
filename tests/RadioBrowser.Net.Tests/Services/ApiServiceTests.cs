@@ -11,7 +11,7 @@ public class ApiServiceTests {
 
     public ApiServiceTests() {
         mockHttpMessageHandler = new MockHttpMessageHandler();
-        restClient = new RestClient(new RestClientOptions { BaseUrl = new Uri("http://localhost/"), ConfigureMessageHandler = (_) => mockHttpMessageHandler }).UseNewtonsoftJson();
+        restClient = new RestClient(new RestClientOptions { BaseUrl = new Uri("http://localhost/"), ConfigureMessageHandler = (_) => mockHttpMessageHandler }, configureSerialization: cfg => cfg.UseNewtonsoftJson());
         sut = new ApiService(restClient);
 
         SetupTestData("Stations", "stations/search");
