@@ -20,6 +20,6 @@ internal class ServerService : IServerService {
         var requestPayload = new RequestPayload {
             ResourceUri = "servers"
         };
-        return await apiService.ProcessRequest<IEnumerable<ServerMirror>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<ServerMirror>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 }

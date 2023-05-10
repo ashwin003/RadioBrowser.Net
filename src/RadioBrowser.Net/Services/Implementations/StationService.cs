@@ -17,7 +17,7 @@ internal class StationService : IStationService {
             ResourceUri = "stations/search",
             Parameters = searchParameters.ToParameters(),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchAsync(StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -25,7 +25,7 @@ internal class StationService : IStationService {
             ResourceUri = "stations",
             Parameters = filter.ToParameters(),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchByCodecAsync(string codec, bool isExactMatch, StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -34,7 +34,7 @@ internal class StationService : IStationService {
             ResourceUri = isExactMatch ? "stations/bycodecexact/{codec}" : "stations/bycodec/{codec}",
             Parameters = filter.ToParameters(codecParameter),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchByCountryAsync(string country, bool isExactMatch, StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -43,7 +43,7 @@ internal class StationService : IStationService {
             ResourceUri = isExactMatch ? "stations/bycountryexact/{country}" : "stations/bycountry/{country}",
             Parameters = filter.ToParameters(countryParameter),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchByLanguageAsync(string language, bool isExactMatch, StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -52,7 +52,7 @@ internal class StationService : IStationService {
             ResourceUri = isExactMatch ? "stations/bylanguageexact/{language}" : "stations/bylanguage/{language}",
             Parameters = filter.ToParameters(languageParameter),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchByNameAsync(string name, bool isExactMatch, StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -61,7 +61,7 @@ internal class StationService : IStationService {
             ResourceUri = isExactMatch ? "stations/bynameexact/{name}" : "stations/byname/{name}",
             Parameters = filter.ToParameters(nameParameter),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchByStateAsync(string state, bool isExactMatch, StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -70,7 +70,7 @@ internal class StationService : IStationService {
             ResourceUri = isExactMatch ? "stations/bystateexact/{state}" : "stations/bystate/{state}",
             Parameters = filter.ToParameters(stateParameter),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<Station>> FetchByTagAsync(string tag, bool isExactMatch, StationSearchFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -79,7 +79,7 @@ internal class StationService : IStationService {
             ResourceUri = isExactMatch ? "stations/bytagexact/{tag}" : "stations/bytag/{tag}",
             Parameters = filter.ToParameters(tagParameter),
         };
-        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<Station?> FetchByUUIDAsync(Guid guid, CancellationToken cancellationToken = default) {
@@ -89,7 +89,7 @@ internal class StationService : IStationService {
                 Parameter.CreateParameter("guid", guid.ToString(), ParameterType.UrlSegment)
             }
         };
-        var stations = await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken);
+        var stations = await apiService.ProcessRequest<IEnumerable<Station>>(requestPayload, cancellationToken).ConfigureAwait(false);
         return stations.FirstOrDefault();
     }
 
@@ -98,7 +98,7 @@ internal class StationService : IStationService {
             ResourceUri = "checks",
             Parameters = filter.ToParameters()
         };
-        return await apiService.ProcessRequest<IEnumerable<StationCheck>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<StationCheck>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<IEnumerable<StationCheck>> FetchChecksAsync(Guid id, StationCheckFilter? filter = null, CancellationToken cancellationToken = default) {
@@ -107,7 +107,7 @@ internal class StationService : IStationService {
             ResourceUri = "checks/{id}",
             Parameters = filter.ToParameters(idParameters)
         };
-        return await apiService.ProcessRequest<IEnumerable<StationCheck>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<StationCheck>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<StationClickResponse> RegisterClick(Guid id, CancellationToken cancellationToken = default) {
@@ -124,6 +124,6 @@ internal class StationService : IStationService {
                 Parameter.CreateParameter("id", id, ParameterType.UrlSegment)
             }
         };
-        return await apiService.ProcessRequest<StationVoteResponse>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<StationVoteResponse>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 }

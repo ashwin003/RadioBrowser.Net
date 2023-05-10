@@ -20,6 +20,6 @@ internal class CountryService : ICountryService
             ResourceUri = "countries",
             Parameters = filter.ToParameters()
         };
-        return await apiService.ProcessRequest<IEnumerable<Country>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Country>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 }

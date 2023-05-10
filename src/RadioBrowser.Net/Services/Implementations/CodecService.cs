@@ -15,6 +15,6 @@ internal class CodecService : ICodecService {
             ResourceUri = "codecs",
             Parameters = filter.ToParameters()
         };
-        return await apiService.ProcessRequest<IEnumerable<Codec>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Codec>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 }

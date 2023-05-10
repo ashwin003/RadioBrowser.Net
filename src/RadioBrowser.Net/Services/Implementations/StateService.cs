@@ -16,6 +16,6 @@ internal class StateService : IStateService {
             ResourceUri = "states",
             Parameters = filter.ToParameters()
         };
-        return await apiService.ProcessRequest<IEnumerable<State>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<State>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 }

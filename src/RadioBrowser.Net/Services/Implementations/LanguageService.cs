@@ -17,6 +17,6 @@ internal class LanguageService : ILanguageService {
             ResourceUri = "languages",
             Parameters = filter.ToParameters()
         };
-        return await apiService.ProcessRequest<IEnumerable<Language>>(requestPayload, cancellationToken);
+        return await apiService.ProcessRequest<IEnumerable<Language>>(requestPayload, cancellationToken).ConfigureAwait(false);
     }
 }
